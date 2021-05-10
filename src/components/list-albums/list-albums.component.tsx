@@ -30,7 +30,8 @@ const ListAlbumComponent: FunctionComponent<IListAlbumComponentProps> = (props: 
                     <thead>
                         <tr>
                             <th>Titre</th>
-                            <th>Description</th>
+                            <th>Year</th>
+                            <th>Cover</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,7 +40,10 @@ const ListAlbumComponent: FunctionComponent<IListAlbumComponentProps> = (props: 
                                 <p>{album.title}</p>
                             </td>
                             <td>
-                                <p>{album.description}</p>
+                                <p>{album.year}</p>
+                            </td>
+                            <td>
+                                <p>{album.cover}</p>
                             </td>
                         </tr>
                     </tbody>
