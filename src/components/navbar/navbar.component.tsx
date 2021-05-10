@@ -21,6 +21,9 @@ const NavbarComponent: FunctionComponent<NavbarComponentProps> = (props: NavbarC
             <Nav.Link href='/listArtists'>
                 List Artists
             </Nav.Link>
+            <Nav.Link href='/addAlbum'>
+                Add Album
+            </Nav.Link>
             </Nav>
             <Nav>
             <Nav.Link href="/login">

@@ -29,7 +29,7 @@ const ListAlbumComponent: FunctionComponent<IListAlbumComponentProps> = (props: 
                     <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
-                            <th>Titre</th>
+                            <th>Title</th>
                             <th>Year</th>
                             <th>Cover</th>
                         </tr>
