@@ -1,4 +1,5 @@
 import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 
@@ -11,7 +12,7 @@ const ListAlbumComponent: FunctionComponent<IListAlbumComponentProps> = (props: 
 
 
     async function getAlbumsFromServer(){
-        const callAlbums = await fetch('http://localhost:3001/albums/getAllAlbums');
+        const callAlbums = await fetch('http://localhost:3002/albums/getAllAlbums');
         const albumsFromServer = await callAlbums.json();
         console.log(albumsFromServer);
         setAlbums(albumsFromServer);
@@ -25,14 +26,25 @@ const ListAlbumComponent: FunctionComponent<IListAlbumComponentProps> = (props: 
         <table>
             {
                 albums.map((album: any, index) => (
-                    <tr>
-                        <td>
-                            <p>{album.title}</p>
-                        </td>
-                        <td>
-                            <p>{album.description}</p>
-                        </td>
-                    </tr>
+                    <Table striped bordered hover size="sm">
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>{album.title}</p>
+                            </td>
+                            <td>
+                                <p>{album.description}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    </Table>
 
                 ))
             }

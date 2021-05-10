@@ -1,5 +1,7 @@
 import React, { Fragment, FunctionComponent } from 'react';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+
 
 
 type NavbarComponentProps = {
@@ -8,17 +10,25 @@ type NavbarComponentProps = {
 const NavbarComponent: FunctionComponent<NavbarComponentProps> = (props: NavbarComponentProps) => {
   return (
     <Fragment>
-        <ul>
-            <NavLink to='/listAlbums'>
-                <li>Albums</li>
-            </NavLink>
-            <NavLink to='/artiste'>
-                <li>Artistes</li>
-            </NavLink>
-            <NavLink to='/admin'>
-                <li>Admin</li>
-            </NavLink>
-        </ul>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand href="#home">Album-Collection</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+            <Nav.Link href='/listAlbums'>
+                List Albums
+            </Nav.Link>
+            <Nav.Link href='/listArtists'>
+                List Artists
+            </Nav.Link>
+            </Nav>
+            <Nav>
+            <Nav.Link href="/login">
+                Login
+            </Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+        </Navbar>
     </Fragment>
   );
 };

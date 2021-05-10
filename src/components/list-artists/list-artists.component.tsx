@@ -11,7 +11,7 @@ const ListArtistComponent: FunctionComponent<IListArtistComponentProps> = (props
 
 
     async function getArtistsFromServer(){
-        const callArtists = await fetch('http://localhost:3001/artists/getAllArtists');
+        const callArtists = await fetch('http://localhost:3002/artists/getAllArtists');
         const artistsFromServer = await callArtists.json();
         console.log(artistsFromServer);
         setArtists(artistsFromServer);

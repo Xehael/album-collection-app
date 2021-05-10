@@ -6,6 +6,8 @@ import NavbarComponent from './components/navbar/navbar.component';
 import ListAlbumComponent from './components/list-albums/list-albums.component';
 import HomeComponent from './components/home/home.component';
 import ListArtistComponent from './components/list-artists/list-artists.component';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
