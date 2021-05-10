@@ -12,15 +12,15 @@ const AddAlbumComponent: FunctionComponent<IAddAlbumComponentProps> = (props: IA
     const [albums, setAlbums] = useState<any[]>([]);
 
 
-    async function getAlbumsFromServer(){
-        const callAlbums = await fetch('http://localhost:3002/albums/getAllAlbums');
+    async function addAlbumToServer(){
+        const callAlbums = await fetch('http://localhost:3002/albums/addAlbums');
         const albumsFromServer = await callAlbums.json();
         console.log(albumsFromServer);
         setAlbums(albumsFromServer);
     }
 
     useEffect(()=> {
-        getAlbumsFromServer();
+        addAlbumToServer();
     }, []);
   return (
     <Fragment>
