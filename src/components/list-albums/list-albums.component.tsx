@@ -11,7 +11,7 @@ const ListAlbumComponent: FunctionComponent<IListAlbumComponentProps> = (props: 
 
 
     async function getAlbumsFromServer(){
-        const callAlbums = await fetch('http://localhost:3001/tasks/getAllTasks');
+        const callAlbums = await fetch('http://localhost:3001/albums/getAllAlbums');
         const albumsFromServer = await callAlbums.json();
         console.log(albumsFromServer);
         setAlbums(albumsFromServer);
